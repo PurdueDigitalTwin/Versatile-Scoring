@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Pipeline outputs: checkpoints, candidate pools, labels, scorers (README: "created by the pipeline")
+exp/
+
+# Hydra / Lightning default run directories, in case a script is run without output_dir=
+outputs/
+multirun/
+.hydra/
+lightning_logs/
+
+# A workspace placed inside the repo (NAVSIM_WORKSPACE defaults to the parent directory)
+cache/
+dataset/
+
+# Data and run artefacts, wherever they land. The one data file the pipeline ships is re-allowed below.
+*.pkl
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.h5
+*.csv
+*.log
+!tools/gaussian_mixed_noise/navtrain_8_mean_std.pkl
+
+# Paper sources (kept out of the code release)
+paper/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

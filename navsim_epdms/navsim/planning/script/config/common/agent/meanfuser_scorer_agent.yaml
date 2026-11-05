@@ -1,0 +1,35 @@
+_target_: navsim.agents.meanfuser.meanfuser_scorer_agent.MeanFuserScorerAgent
+_convert_: 'all'
+
+trajectory_sampling:
+  _target_: nuplan.planning.simulation.trajectory.trajectory_sampling.TrajectorySampling
+  _convert_: 'all'
+  time_horizon: 4
+  interval_length: 0.5
+
+config:
+  _target_: navsim.agents.meanfuser.meanfuser_config.MeanfuserConfig
+  _convert_: 'all'
+  seq_len: 1
+  ckpt_path: meanfuser_ckpt_path
+  lidar_seq_len: 4
+
+  num_proposals: 8
+  navtrain_mean_std_path: 'tools/gaussian_mixed_noise/navtrain_8_mean_std.pkl'
+
+  noise_type: 'multi_gaussian'
+
+  output_dir: None
+
+  trajectory_sampling:
+    _target_: nuplan.planning.simulation.trajectory.trajectory_sampling.TrajectorySampling
+    _convert_: 'all'
+    time_horizon: 4
+    interval_length: 0.5
+
+checkpoint_path: null
+lr: 1e-4
+max_epochs: 100
+scorer_dir: ???      # a scripts/train_scorer.sh mf run, e.g. exp/meanfuser_checkpoints/scorer_mf_design_seed0
+scorer_tag: bestval  # comp*_bestval.pt, the validation-selected checkpoint the tables use
+scorer_d_model: 128

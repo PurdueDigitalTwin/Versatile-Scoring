@@ -1,0 +1,11 @@
+_target_: navsim.agents.deploy_index_agent.DeployIndexAgent
+_convert_: 'all'
+
+trajectory_sampling:
+  _target_: nuplan.planning.simulation.trajectory.trajectory_sampling.TrajectorySampling
+  _convert_: 'all'
+  time_horizon: 4
+  interval_length: 0.5
+
+candidate_dataset_path: ???   # set per-architecture in the wrapper
+deploy_index: 0        # int proposal index, or the string "arm"
