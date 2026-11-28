@@ -252,11 +252,11 @@ on navtest and logged for diagnostics only. The reported checkpoint is `bestval`
 ## Citation
 
 ```bibtex
-@article{li2026versatile,
-  title   = {Designing Versatile Samples for Learned Trajectory Scoring},
-  author  = {Li, Yaguang and Zhang, Jiaru and Wei, Chuheng and Cui, Can and Wang, Ziran},
-  journal = {arXiv preprint arXiv:2609.01799},
-  year    = {2026}
+@inproceedings{li2027versatile,
+  title={Designing Versatile Samples for Learned Trajectory Scoring},
+  author={Li, Yaguang and Zhang, Jiaru and Wei, Chuheng and Cui, Can and Wang, Ziran},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  year={2027}
 }
 ```
 
